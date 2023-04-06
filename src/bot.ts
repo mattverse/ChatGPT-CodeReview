@@ -6,6 +6,7 @@ const OPENAI_API_KEY = 'OPENAI_API_KEY';
 const MAX_PATCH_COUNT = 4000;
 
 export const robot = (app: Probot) => {
+  console.log("=====robot starting")
   const loadChat = async (context: Context) => {
     if (process.env.OPENAI_API_KEY) {
       return new Chat(process.env.OPENAI_API_KEY);
