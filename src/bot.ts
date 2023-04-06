@@ -42,6 +42,7 @@ export const robot = (app: Probot) => {
   app.on(
     ['pull_request.opened', 'pull_request.synchronize', 'pull_request.labeled'],
     async (context) => {
+      console.log("-----review started")      
       const repo = context.repo();
       const chat = await loadChat(context);
 
